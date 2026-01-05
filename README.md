@@ -14,6 +14,7 @@ The focus of this project is to showcase how a frontend engineer:
 - Builds reusable and maintainable components
 
 ## 🌍 Live Demo
+https://e-commerce-react-one-tau.vercel.app/
 
 ## Key Features
 - Product listing with client-side pagination
@@ -70,6 +71,7 @@ npm run dev
 ```
 
 ## 📸 Screenshots
+![Image](./screenshots/page-1.png)
 
 ## Future Improvements
 - Shopping cart & checkout flow
