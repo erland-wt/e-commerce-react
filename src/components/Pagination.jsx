@@ -4,12 +4,12 @@ function Pagination({ totalItems, itemsPerPage, currentPage, onPageChange }) {
     if (totalPages <= 1) return null;
 
     return (
-        <div style={{ marginTop: "16px" }}>
+        <div className="pagination-container">
             {Array.from({ length: totalPages }).map((_, index) => {
                 const page = index + 1;
 
                 return (
-                    <button key={page} onClick={() => onPageChange(page)} style={{ marginRight: "4px", fontWeight: page === currentPage ? "bold" : "normal" }}>
+                    <button key={page} onClick={() => onPageChange(page)} disabled={page === currentPage}>
                         {page}
                     </button>
                 );

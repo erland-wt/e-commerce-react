@@ -38,25 +38,28 @@ function Products() {
     if (error) return <p style={{ color: 'red' }}>Error: {error}</p>;
 
     return (
-        <div>
-            <h2>Products Catalog</h2>
+        <div className='content-container'>
+            <h1>Products Catalog</h1>
 
-            <input 
-                type='text'
-                placeholder='Search product...'
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                style={{ marginRight: "8px" }}
-            />
+            <div className='search-filter-container'>
+                <input 
+                    type='text'
+                    placeholder='Search product...'
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    style={{ marginRight: "8px" }}
+                />
 
-            <select value={category} onChange={(e) => setCategory(e.target.value)}>
-                <option value="">All Categories</option>
-                {categories.map(cat => (
-                    <option key={cat} value={cat}>
-                        {cat}
-                    </option>
-                ))}
-            </select>
+                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                    <option value="">All Categories</option>
+                    {categories.map(cat => (
+                        <option key={cat} value={cat}>
+                            {cat}
+                        </option>
+                    ))}
+                </select>
+            </div>
+            
 
             <ProductList products={paginatedProducts} />
 
